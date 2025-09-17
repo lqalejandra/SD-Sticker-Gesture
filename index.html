@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaPipe / Three.js Shape Creator</title>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="eb59c81c-27cb-4e1d-9e8c-bfbe70c48cd9"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Shape Creator Tutorial">
+  <meta name="description" content="create/control 3D shapes with hand gestures">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+
+</head>
+<body>
+
+  <video id="webcam" autoplay muted playsinline></video>
+  <canvas id="canvas"></canvas>
+  <div id="three-canvas"></div>
+  <img id="recycle-bin" src="recyclebin.png" alt="Recycle Bin" />
+  <div id="instructions" class="text-box">
+    Hold you palm up to reveal!
+  </div>
+
+  <div id="message-input" class="text-box">
+    <input type="text" id="text-input" placeholder="Enter message..." maxlength="50">
+    <input type="file" id="image-input" accept="image/*,video/*" style="margin: 10px 0;">
+    <div id="color-picker">
+      <div class="color-option" data-color="#ff6b6b" style="background-color: #ff6b6b;"></div>
+      <div class="color-option" data-color="#4ecdc4" style="background-color: #4ecdc4;"></div>
+      <div class="color-option" data-color="#45b7d1" style="background-color: #45b7d1;"></div>
+      <div class="color-option" data-color="#96ceb4" style="background-color: #96ceb4;"></div>
+      <div class="color-option" data-color="#feca57" style="background-color: #feca57;"></div>
+      <div class="color-option" data-color="#ff9ff3" style="background-color: #ff9ff3;"></div>
+      <div class="color-option" data-color="#a8e6cf" style="background-color: #a8e6cf;"></div>
+      <div class="color-option" data-color="#dda0dd" style="background-color: #dda0dd;"></div>
+    </div>
+    <button id="add-message">Add Message</button>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
