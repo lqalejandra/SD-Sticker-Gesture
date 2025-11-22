@@ -1,0 +1,14 @@
+{
+  "name": "stickers",
+  "version": "1.0.0",
+  "description": "Hold this sticker in your hand",
+  "main": "main.js",
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "dev": "npx http-server . -p 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
